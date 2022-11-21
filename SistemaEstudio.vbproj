@@ -1,0 +1,355 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{316D414E-58B2-49D5-B109-11A00040AA08}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>SistemaEstudio.My.MyApplication</StartupObject>
+    <RootNamespace>SistemaEstudio</RootNamespace>
+    <AssemblyName>SistemaEstudio</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>SistemaEstudio.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>SistemaEstudio.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>hospital-2_icon-icons.com_66067.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="FontAwesome.Sharp, Version=6.1.1.0, Culture=neutral, PublicKeyToken=d16d1e4e568ec10f, processorArchitecture=MSIL">
+      <HintPath>packages\FontAwesome.Sharp.6.1.1\lib\net45\FontAwesome.Sharp.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="WinFormAnimation, Version=1.6.0.4, Culture=neutral, PublicKeyToken=310fd07b25df79b3, processorArchitecture=MSIL">
+      <HintPath>packages\WinFormAnimation.1.6.0.4\lib\net40\WinFormAnimation.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="fmrreporte.Designer.vb">
+      <DependentUpon>fmrreporte.vb</DependentUpon>
+    </Compile>
+    <Compile Include="fmrreporte.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reporte\CrystalReport1.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReport1.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="FmrAbmAgenda.Designer.vb">
+      <DependentUpon>FmrAbmAgenda.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FmrAbmAgenda.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FmrAbmEstudio.Designer.vb">
+      <DependentUpon>FmrAbmEstudio.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FmrAbmEstudio.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FmrAbmObrasocial.Designer.vb">
+      <DependentUpon>FmrAbmObrasocial.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FmrAbmObrasocial.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FmrabmPaciente.Designer.vb">
+      <DependentUpon>FmrabmPaciente.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FmrabmPaciente.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FmrAbmTipoDocumento.Designer.vb">
+      <DependentUpon>FmrAbmTipoDocumento.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FmrAbmTipoDocumento.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FmrAbmTurno.Designer.vb">
+      <DependentUpon>FmrAbmTurno.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FmrAbmTurno.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FmrAgenda.Designer.vb">
+      <DependentUpon>FmrAgenda.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FmrAgenda.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fmrLocalidad.Designer.vb">
+      <DependentUpon>fmrLocalidad.vb</DependentUpon>
+    </Compile>
+    <Compile Include="fmrLocalidad.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fmrabmlocalidad.Designer.vb">
+      <DependentUpon>fmrabmlocalidad.vb</DependentUpon>
+    </Compile>
+    <Compile Include="fmrabmlocalidad.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FmrObraSocial.Designer.vb">
+      <DependentUpon>FmrObraSocial.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FmrObraSocial.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FmrPaciente.Designer.vb">
+      <DependentUpon>FmrPaciente.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FmrPaciente.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Fmrprincipal.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Fmrprincipal.Designer.vb">
+      <DependentUpon>Fmrprincipal.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fmrTipoDocumento.Designer.vb">
+      <DependentUpon>fmrTipoDocumento.vb</DependentUpon>
+    </Compile>
+    <Compile Include="fmrTipoDocumento.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FmrTurno.Designer.vb">
+      <DependentUpon>FmrTurno.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FmrTurno.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModuloSistema.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="fmrreporte.resx">
+      <DependentUpon>fmrreporte.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reporte\CrystalReport1.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReport1.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FmrAbmAgenda.resx">
+      <DependentUpon>FmrAbmAgenda.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FmrAbmEstudio.resx">
+      <DependentUpon>FmrAbmEstudio.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FmrAbmObrasocial.resx">
+      <DependentUpon>FmrAbmObrasocial.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FmrabmPaciente.resx">
+      <DependentUpon>FmrabmPaciente.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FmrAbmTipoDocumento.resx">
+      <DependentUpon>FmrAbmTipoDocumento.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FmrAbmTurno.resx">
+      <DependentUpon>FmrAbmTurno.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FmrAgenda.resx">
+      <DependentUpon>FmrAgenda.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fmrLocalidad.resx">
+      <DependentUpon>fmrLocalidad.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fmrabmlocalidad.resx">
+      <DependentUpon>fmrabmlocalidad.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FmrObraSocial.resx">
+      <DependentUpon>FmrObraSocial.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FmrPaciente.resx">
+      <DependentUpon>FmrPaciente.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fmrprincipal.resx">
+      <DependentUpon>Fmrprincipal.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fmrTipoDocumento.resx">
+      <DependentUpon>fmrTipoDocumento.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FmrTurno.resx">
+      <DependentUpon>FmrTurno.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\businesspackage_additionalpackage_box_add_insert_negoci_2335 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\documentediting_editdocuments_text_documentedi_2820.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconfinder-trash-4341321_120557.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Exit-Page_icon-icons.com_53732.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\crowd_patient_patients_icon_140420.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\crowd_patient_patients_icon_140420 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\briefcasemedicaldoctor_Dr.briefcas_10745.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\appointment_102882.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\checklist_medical_healthcare_pen_clipboard_clipchart_icon_142002 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logout_37127.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cancelar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Aceptar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\preview_search_find_locate_1551.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\crowd_patient_patients_icon_1404201.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\briefcasemedicaldoctor_Dr.briefcas_107451.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\calendar_alert_notification_date_appointment_icon_153130.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\events_calendar_16342.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\business_schedule_workdays_work_days_calendar_briefcase_icon_188771.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\checklist_25365.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\phonebook_128x128-32_22249.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\apps_printer_15747.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1904675-configuration-edit-gear-options-preferences-setting-settings_122525.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\settings_78352.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="hospital-2_icon-icons.com_66067.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+</Project>
